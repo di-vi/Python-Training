@@ -2,3 +2,21 @@
 X-DSPAM-Confidence:    0.8475
 Count these lines and extract the floating point values from each of the lines and compute the average of those values. 
 sample data: http://www.py4e.com/code3/mbox-short.txt
+
+
+
+count = 0
+total = 0
+fname = raw_input("Enter file name: ")
+fh = open(fname)
+for line in fh:
+    if line.startswith("X-DSPAM-Confidence:"):
+        count =count + 1
+        colon = line.find(":")
+        
+        val = line[colon+1 : ]
+        valu = float(val)
+        #value = valu.rstrip()
+        total = total + valu
+    continue
+print("Average spam confidence:", total/count)
