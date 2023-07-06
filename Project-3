@@ -1,2 +1,22 @@
 # A program to prompt the user for hours and rate per hour using input to compute gross pay. 
-Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for all hours worked above 40 hours. 
+Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for all hours worked above 40 hours.
+Use the logic to do the computation of pay in a function called computepay().
+
+
+
+def computepay(h, r):
+    h=float(hrs)
+    r=float(rate)
+    if(h<40):
+        grosspay = h * r
+    elif(h>40):
+        output1=40 * r
+        calc=h - 40
+        output2=calc * 1.5 * r
+        grosspay = output1 + output2
+    return grosspay
+
+hrs = input("Enter Hours:")
+rate = input("Enter Rate:")
+p = computepay(hrs,rate)
+print("Pay", p)
