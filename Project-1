@@ -1,2 +1,17 @@
-Project-1
-# Testing
+# a program to prompt the user for hours and rate per hour using input to compute gross pay. 
+Pay the hourly rate for the hours up to 40 and 1.5 times the hourly rate for all hours worked above 40 hours.
+
+
+
+hrs = input("Enter Hours:")
+rate = input("Enter Rate:")
+h = float(hrs)
+r = float(rate)
+if(h<40):
+    grosspay = h * r
+elif(h>40):
+    output1 = 40 * r
+    calc = h - 40
+    output2 = calc * 1.5 * r
+    grosspay = output1 + output2
+print(grosspay)
